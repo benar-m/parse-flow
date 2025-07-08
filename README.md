@@ -1,3 +1,6 @@
+## ParseFlow
+
+A tool to ingest heroku logdrains,parse, visualize and store. With failure rate tracking and slow requests flagging
 ```
                     ┌──────────────────────┐
                     │    Logs Receiver     │

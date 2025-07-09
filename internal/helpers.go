@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"fmt"
 	"log"
 	"strconv"
 	"time"
@@ -71,8 +72,9 @@ func BuildParsedLog(d map[string]string) *ParsedLog {
 	} else {
 		isSlow = false
 	}
-	time, err := time.Parse(time.RFC3339Nano, d["timeStampStr"])
+	time, err := time.Parse(time.RFC3339Nano, d["timestamp"])
 	if err != nil {
+		fmt.Printf("time %v error %v", time, err)
 		return &ParsedLog{}
 	}
 

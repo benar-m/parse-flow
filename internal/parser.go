@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"fmt"
 	"log"
 	"strings"
 )
@@ -33,10 +34,21 @@ func (a *App) ParseLog(logByte []byte) map[string]string {
 		return map[string]string{}
 	}
 	timeStampstr := f[0]
+	fmt.Printf("timestamp %v\n", timeStampstr)
 	logParts["timestamp"] = timeStampstr
 	parsedlog := BuildParsedLog(logParts)
+	fmt.Printf("parsed logg: %v", parsedlog)
+	fmt.Println(logParts)
 	a.ParsedLogChan <- parsedlog
 
 	return logParts
 
+}
+
+// Reads from RawLogChan and Parses
+func (a *App) ParserWorker() {
+	fmt.Println("Parse Responding")
+	for logBytes := range a.RawLogChan {
+		a.ParseLog(logBytes)
+	}
 }

@@ -8,8 +8,11 @@ import (
 	"strings"
 )
 
+// Handles a post request from the logplexer and verifies then writes the log to Raw Log Chan
 func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 	//verify first - specific to heroku -- (Parser will be compliant to RFC5424 on https drains)
+	defer r.Body.Close()
+
 	if r.Header.Get("Content-Type") != "application/logplex-1" || r.Method != http.MethodPost {
 		log.Println("Invalid Content")
 		w.Header().Set("Content-Length", "0")
@@ -35,10 +38,9 @@ func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Internal Server Error: %v", err)
 		return
 	}
-	defer r.Body.Close()
 
 	if a.Dc.Add(requestId) {
-		RawLogChan <- body
+		a.RawLogChan <- body
 
 	} else {
 		log.Println("Already Processed")

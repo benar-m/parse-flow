@@ -5,6 +5,8 @@ import (
 	"log"
 	"strconv"
 	"time"
+
+	ip2 "github.com/ip2location/ip2location-go"
 )
 
 const (
@@ -109,4 +111,12 @@ func ClassifyResTime(s time.Duration) string {
 		return "critical"
 	}
 
+}
+func (a *App) fingerPrintIp(ip string) ip2.IP2Locationrecord {
+
+	result, err := a.GeoDb.Get_all(ip)
+	if err != nil {
+		return ip2.IP2Locationrecord{}
+	}
+	return result
 }

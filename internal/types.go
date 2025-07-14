@@ -11,6 +11,7 @@ type App struct {
 	RawLogChan    chan []byte
 	ParsedLogChan chan *ParsedLog
 	GeoDb         *ip2.DB
+	Metric        *Metric
 }
 type DedupeCache struct {
 	Buffer   []string //ring buffer

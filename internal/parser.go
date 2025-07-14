@@ -12,9 +12,6 @@ import (
 //write to ParsedLogs
 
 func (a *App) ParseLog(logByte []byte) map[string]string {
-	//
-	//2025-07-09T13:42:00.789123+00:00 heroku[router]: at=error method=POST path="/api/data" host=myapp.herokuapp.com request_id=xyz-789abc fwd="102.130.55.77" dyno=web.1 connect=0ms service=503ms status=500 bytes=512 protocol=https
-
 	logString := string(logByte)
 	fields := strings.Fields(logString)
 	logParts := make(map[string]string)

@@ -12,7 +12,6 @@ import (
 func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 	//verify first - specific to heroku -- (Parser will be compliant to RFC5424 on https drains)
 	defer r.Body.Close()
-
 	if r.Header.Get("Content-Type") != "application/logplex-1" || r.Method != http.MethodPost {
 		log.Println("Invalid Content")
 		w.Header().Set("Content-Length", "0")

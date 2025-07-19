@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"sync"
 	"time"
 
 	ip2 "github.com/ip2location/ip2location-go"
@@ -12,6 +13,7 @@ type App struct {
 	ParsedLogChan chan *ParsedLog
 	GeoDb         *ip2.DB
 	Metric        *Metric
+	MetricsMu     sync.RWMutex // protect Metric field
 }
 type DedupeCache struct {
 	Buffer   []string //ring buffer

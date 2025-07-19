@@ -28,6 +28,7 @@ func main() {
 	}
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /logdrains", app.LogReceiver)
+	mux.HandleFunc("GET /metrics", app.MetricsHandler)
 	// str := `2025-07-09T13:37:42.123456+00:00 heroku[router]: at=info method=GET path="/login" host=myapp.herokuapp.com request_id=123abc-456def fwd="197.248.10.42" dyno=web.1 connect=1ms service=23ms status=200 bytes=1345 protocol=https`
 	// b := []byte(str)
 	// fmt.Println(app.ParseLog(b))
@@ -41,6 +42,7 @@ func main() {
 	go func() {
 		app.ParserWorker()
 	}()
+	app.StartMetricsAggregator()
 
 	err = http.ListenAndServe(":5000", mux)
 	if err != nil {

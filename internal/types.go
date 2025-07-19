@@ -8,12 +8,15 @@ import (
 )
 
 type App struct {
-	Dc            *DedupeCache
-	RawLogChan    chan []byte
-	ParsedLogChan chan *ParsedLog
-	GeoDb         *ip2.DB
-	Metric        *Metric
-	MetricsMu     sync.RWMutex // protect Metric field
+	Dc             *DedupeCache
+	RawLogChan     chan []byte
+	ParsedLogChan  chan *ParsedLog
+	GeoDb          *ip2.DB
+	Metric         *Metric
+	MetricsMu      sync.RWMutex // protect Metric field
+	DbWriteChan    chan *Metric
+	DbRawWriteChan chan *ParsedLog
+	MetricChan     chan *ParsedLog
 }
 type DedupeCache struct {
 	Buffer   []string //ring buffer

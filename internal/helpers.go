@@ -113,6 +113,9 @@ func ClassifyResTime(s time.Duration) string {
 
 }
 func (a *App) fingerPrintIp(ip string) ip2.IP2Locationrecord {
+	if a.GeoDb == nil {
+		return ip2.IP2Locationrecord{}
+	}
 
 	result, err := a.GeoDb.Get_all(ip)
 	if err != nil {

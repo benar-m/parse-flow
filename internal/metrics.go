@@ -53,7 +53,7 @@ func (a *App) StartMetricsAggregator() {
 
 	//classify requests and increment their counters
 	go func() {
-		for l := range a.ParsedLogChan {
+		for l := range a.MetricChan {
 			aggregator.mu.Lock()
 
 			//classify status code

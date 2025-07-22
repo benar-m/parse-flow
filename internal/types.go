@@ -17,6 +17,7 @@ type App struct {
 	DbWriteChan    chan *Metric
 	DbRawWriteChan chan *ParsedLog
 	MetricChan     chan *ParsedLog
+	Config         *Config
 }
 type DedupeCache struct {
 	Buffer   []string //ring buffer

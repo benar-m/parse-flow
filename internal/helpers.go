@@ -1,7 +1,6 @@
 package internal
 
 import (
-	"fmt"
 	"log"
 	"strconv"
 	"time"
@@ -50,16 +49,29 @@ func ParseDuration(s string) (t time.Duration) {
 }
 
 func BuildParsedLog(d map[string]string) *ParsedLog {
-	size, _ := strconv.Atoi(d["bytes"])
-	status, _ := strconv.Atoi(d["status"])
+	size, err := strconv.Atoi(d["bytes"])
+	if err != nil {
+		size = 0 // Default value instead of ignoring error
+	}
+
+	status, err := strconv.Atoi(d["status"])
+	if err != nil {
+		status = 0 // Default value for invalid status
+	}
+
 	responseTime, err := time.ParseDuration(d["service"])
 	if err != nil {
 		responseTime = 0
-		log.Println("bad duration parsed")
+		if d["service"] != "" {
+			log.Printf("Invalid service duration: %s", d["service"])
+		}
 	}
 	connectTime, err := time.ParseDuration(d["connect"])
 	if err != nil {
-		log.Println("bad duration parsed")
+		connectTime = 0
+		if d["connect"] != "" {
+			log.Printf("Invalid connect duration: %s", d["connect"])
+		}
 	}
 	var success bool
 	var isSlow bool
@@ -74,14 +86,17 @@ func BuildParsedLog(d map[string]string) *ParsedLog {
 	} else {
 		isSlow = false
 	}
-	time, err := time.Parse(time.RFC3339Nano, d["timestamp"])
+	timestamp, err := time.Parse(time.RFC3339Nano, d["timestamp"])
 	if err != nil {
-		fmt.Printf("time %v error %v", time, err)
-		return &ParsedLog{}
+		if d["timestamp"] != "" {
+			log.Printf("Invalid timestamp format: %s, error: %v", d["timestamp"], err)
+		}
+		// Return zero time instead of nil
+		timestamp = time.Time{}
 	}
 
 	return &ParsedLog{
-		Time:         time,
+		Time:         timestamp,
 		Level:        d["at"],
 		Size:         size,
 		ConnectTime:  connectTime,

@@ -31,11 +31,15 @@ type MetricsAggregator struct {
 	responseTimes []time.Duration
 	dynoErrors    map[string]int64 // Track errors per dyno
 	startTime     time.Time
-	mu            sync.RWMutex
 }
 
 // A function to a go routine that will own a metrics instance
 func (a *App) StartMetricsAggregator() {
+	//wait for startmetrics before dbwriter
+	var initWg sync.WaitGroup
+	initWg.Add(1)
+
+	a.MetricsMu.Lock()
 	a.Metric = &Metric{
 		Timestamp:       time.Now(),
 		TopCountries:    make(map[string]int64),
@@ -43,18 +47,21 @@ func (a *App) StartMetricsAggregator() {
 		TopEndpoints:    make(map[string]int64),
 		ActiveAlerts:    []Alert{},
 	}
+	a.MetricsMu.Unlock()
 
 	// Initialize aggregator
 	aggregator := &MetricsAggregator{
-		responseTimes: make([]time.Duration, 0, 1000), // Preallocate for efficiency
+		responseTimes: make([]time.Duration, 0, 1000),
 		dynoErrors:    make(map[string]int64),
 		startTime:     time.Now(),
 	}
 
 	//classify requests and increment their counters
 	go func() {
+		initWg.Done()
+
 		for l := range a.MetricChan {
-			aggregator.mu.Lock()
+			a.MetricsMu.Lock()
 
 			//classify status code
 			switch {
@@ -186,9 +193,12 @@ func (a *App) StartMetricsAggregator() {
 			a.generateAlerts()
 			a.updateChannelHealth()
 			a.Metric.Timestamp = time.Now()
-			aggregator.mu.Unlock()
+			a.MetricsMu.Unlock()
 		}
 	}()
+
+	// Wait for goroutine to signal initialization is complete
+	initWg.Wait()
 }
 
 func (a *App) calculatePercentiles(aggregator *MetricsAggregator) {

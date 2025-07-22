@@ -11,7 +11,12 @@ import (
 
 // consume from DB chans and also trigger snapshots
 func (a *App) StartDbWriter() {
-	db, err := sql.Open("sqlite3", "./logs.db")
+	dbPath := "./logs.db" // default
+	if a.Config != nil {
+		dbPath = a.Config.DatabasePath
+	}
+
+	db, err := sql.Open("sqlite3", dbPath+"?cache=shared&mode=rwc")
 	if err != nil {
 		log.Fatal("Failed to open database:", err)
 	}
@@ -20,6 +25,12 @@ func (a *App) StartDbWriter() {
 	err = a.initTables(db)
 	if err != nil {
 		log.Fatal("Failed to create tables:", err)
+	}
+
+	// Ensure database is in read-write mode
+	_, err = db.Exec("PRAGMA journal_mode=WAL")
+	if err != nil {
+		log.Printf("Warning: Failed to set WAL mode: %v", err)
 	}
 
 	const batchSize = 100

@@ -1,6 +1,6 @@
-## ParseFlow
+### ParseFlow
 
-A log processing pipeline for Heroku logdrains.
+Concurrent Go log processing pipeline for Heroku HTTPS log drains
 ```
                     ┌──────────────────────┐
                     │   HTTP Receiver      │◄─── Heroku Logplex

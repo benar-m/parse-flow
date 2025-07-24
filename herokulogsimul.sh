@@ -52,7 +52,7 @@ generate_response_time() {
     echo $((2000 + RANDOM % 5000))
   fi
 }
-for i in {1..300}; do
+for i in {1..10}; do
   method=${METHODS[$((RANDOM % ${#METHODS[@]}))]}
   path=${PATHS[$((RANDOM % ${#PATHS[@]}))]}
   ip=${IPS[$((RANDOM % ${#IPS[@]}))]}

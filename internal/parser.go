@@ -1,15 +1,9 @@
 package internal
 
 import (
-	"fmt"
 	"log"
 	"strings"
 )
-
-//Define a Parseing functions
-
-//Spawn workers
-//write to ParsedLogs
 
 func (a *App) ParseLog(logByte []byte) map[string]string {
 	logString := string(logByte)
@@ -31,11 +25,10 @@ func (a *App) ParseLog(logByte []byte) map[string]string {
 		return map[string]string{}
 	}
 	timeStampstr := f[0]
-	fmt.Printf("timestamp %v\n", timeStampstr)
 	logParts["timestamp"] = timeStampstr
 	parsedlog := BuildParsedLog(logParts)
-	fmt.Printf("parsed logg: %v", parsedlog)
-	fmt.Println(logParts)
+
+	// Always send parsed logs (BuildParsedLog now returns valid struct with defaults)
 	a.ParsedLogChan <- parsedlog
 
 	return logParts
@@ -44,7 +37,6 @@ func (a *App) ParseLog(logByte []byte) map[string]string {
 
 // Reads from RawLogChan and Parses
 func (a *App) ParserWorker() {
-	fmt.Println("Parse Responding")
 	for logBytes := range a.RawLogChan {
 		a.ParseLog(logBytes)
 	}

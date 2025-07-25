@@ -4,15 +4,14 @@ import "log"
 
 func (a *App) FanOut() {
 	for l := range a.ParsedLogChan {
-		select {
-		case a.MetricChan <- l:
-		default:
-			log.Printf("MetricChan full, dropping log from %s", l.SourceDyno)
-		}
+		// Block on MetricChan - metrics are critical
+		a.MetricChan <- l
+
+		// Non-blocking send to DB with proper logging
 		select {
 		case a.DbRawWriteChan <- l:
 		default:
-			log.Printf("DbRawWriteChan full, dropping log from %s", l.SourceDyno)
+			log.Printf("WARNING: DbRawWriteChan full, log data may be lost from %s", l.SourceDyno)
 		}
 	}
 }

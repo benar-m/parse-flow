@@ -10,18 +10,20 @@ import (
 )
 
 func main() {
+	config := internal.LoadConfig()
+
 	dc := internal.NewDedupeCache(100)
-	rawLogChan := make(chan []byte, 1000)
-	parsedLogChan := make(chan *internal.ParsedLog, 1000)
+	rawLogChan := make(chan []byte, config.RawLogChanSize)
+	parsedLogChan := make(chan *internal.ParsedLog, config.ParsedLogChanSize)
 	db, err := ip2.OpenDB("./data/IP2LOCATION-LITE-DB1.IPV6.BIN")
 	if err != nil {
 		fmt.Println(err)
 		log.Fatalf("Failed to open ip2location DB")
 	}
 	defer db.Close()
-	rawDbChan := make(chan *internal.ParsedLog, 1000)
+	rawDbChan := make(chan *internal.ParsedLog, config.RawLogChanSize)
 	dbWriteChan := make(chan *internal.Metric, 1000) //metric should <- to this on processing flow
-	metricChan := make(chan *internal.ParsedLog, 100)
+	metricChan := make(chan *internal.ParsedLog, config.MetricChanSize)
 
 	app := &internal.App{
 		Dc:             dc,
@@ -31,6 +33,7 @@ func main() {
 		DbRawWriteChan: rawDbChan,
 		DbWriteChan:    dbWriteChan,
 		MetricChan:     metricChan,
+		Config:         config,
 	}
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /logdrains", app.LogReceiver)
@@ -41,7 +44,7 @@ func main() {
 	go app.StartMetricsAggregator()
 	go app.StartDbWriter()
 
-	err = http.ListenAndServe(":5000", mux)
+	err = http.ListenAndServe(":"+config.Port, mux)
 	if err != nil {
 		log.Fatalf("Could not Start the Server: %v", err)
 	}

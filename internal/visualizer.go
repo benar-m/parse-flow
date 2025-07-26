@@ -1,9 +1,11 @@
 package internal
 
 import (
+	"crypto/hmac"
 	"encoding/json"
 	"maps"
 	"net/http"
+	"os"
 )
 
 func (a *App) GetMetricsSnapshot() *Metric {
@@ -55,6 +57,26 @@ func (a *App) GetMetricsSnapshot() *Metric {
 }
 
 func (a *App) MetricsHandler(w http.ResponseWriter, r *http.Request) {
+	apiKey := r.Header.Get("X-API-KEY")
+	expectedKey := os.Getenv("METRICS-API-KEY")
+	if !hmac.Equal([]byte(apiKey), []byte(expectedKey)) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusUnauthorized)
+		json.NewEncoder(w).Encode(map[string]string{
+			"error": "unauthorized",
+		})
+		return
+	}
+	bucket := a.RateLimiter.GetBucket(apiKey)
+	if !bucket.Allow() {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusTooManyRequests)
+		json.NewEncoder(w).Encode(map[string]string{
+			"error":       "rate limit exceeded",
+			"retry_after": "1",
+		})
+		return
+	}
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 

@@ -35,6 +35,7 @@ func main() {
 		MetricChan:     metricChan,
 		Config:         config,
 	}
+	app.RateLimiter = internal.NewRateLimiterMap(100, 10)
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /logdrains", app.LogReceiver)
 	mux.HandleFunc("GET /metrics", app.MetricsHandler)

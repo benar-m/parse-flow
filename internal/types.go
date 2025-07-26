@@ -17,6 +17,7 @@ type App struct {
 	DbWriteChan    chan *Metric
 	DbRawWriteChan chan *ParsedLog
 	MetricChan     chan *ParsedLog
+	RateLimiter    *RateLimiterMap
 	Config         *Config
 }
 type DedupeCache struct {

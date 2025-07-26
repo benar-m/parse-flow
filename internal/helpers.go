@@ -1,6 +1,8 @@
 package internal
 
 import (
+	"crypto/rand"
+	"encoding/hex"
 	"log"
 	"strconv"
 	"time"
@@ -137,4 +139,10 @@ func (a *App) fingerPrintIp(ip string) ip2.IP2Locationrecord {
 		return ip2.IP2Locationrecord{}
 	}
 	return result
+}
+func genApiKey() (string, error) {
+	key := make([]byte, 32)
+	_, err := rand.Read(key)
+
+	return hex.EncodeToString(key), err
 }

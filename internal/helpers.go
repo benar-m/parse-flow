@@ -140,7 +140,7 @@ func (a *App) fingerPrintIp(ip string) ip2.IP2Locationrecord {
 	}
 	return result
 }
-func genApiKey() (string, error) {
+func GenApiKey() (string, error) {
 	key := make([]byte, 32)
 	_, err := rand.Read(key)
 

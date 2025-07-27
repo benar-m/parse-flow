@@ -58,7 +58,7 @@ func (a *App) GetMetricsSnapshot() *Metric {
 
 func (a *App) MetricsHandler(w http.ResponseWriter, r *http.Request) {
 	apiKey := r.Header.Get("X-API-KEY")
-	expectedKey := os.Getenv("METRICS-API-KEY")
+	expectedKey := os.Getenv("METRICS_API_KEY")
 	if !hmac.Equal([]byte(apiKey), []byte(expectedKey)) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusUnauthorized)

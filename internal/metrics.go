@@ -172,7 +172,8 @@ func (a *App) StartMetricsAggregator() {
 
 			// success/error rates
 			if a.Metric.TotalRequests > 0 {
-				a.Metric.SuccessRate = (float64(a.Metric.Status2xx) / float64(a.Metric.TotalRequests)) * 100
+				successCount := a.Metric.Status2xx + a.Metric.Status3xx
+				a.Metric.SuccessRate = (float64(successCount) / float64(a.Metric.TotalRequests)) * 100
 				a.Metric.ErrorRate = (float64(a.Metric.Status4xx+a.Metric.Status5xx) / float64(a.Metric.TotalRequests)) * 100
 			}
 

@@ -44,7 +44,6 @@ func main() {
 	go app.FanOut()
 	go app.StartMetricsAggregator()
 	go app.StartDbWriter()
-
 	err = http.ListenAndServe(":"+config.Port, mux)
 	if err != nil {
 		log.Fatalf("Could not Start the Server: %v", err)

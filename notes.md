@@ -1,0 +1,1 @@
+Heroku logs come with a <> as first field

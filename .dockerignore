@@ -22,7 +22,7 @@ Thumbs.db
 *.tmp
 *.temp
 
-ssl/
-*.pem
-*.key
-*.crt
+# ssl/
+# *.pem
+# *.key
+# *.crt

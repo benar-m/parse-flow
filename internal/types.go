@@ -21,6 +21,7 @@ type App struct {
 	Config         *Config
 }
 type DedupeCache struct {
+	mu       sync.Mutex
 	Buffer   []string //ring buffer
 	Lookup   map[string]struct{}
 	Size     int

@@ -1,0 +1,501 @@
+[{
+  "id": 1,
+  "source": "205",
+  "timestamp": "2025-03-18 07:39:06.515872",
+  "message": "<134>1 2025-03-18T07:39:02.817989+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:39:02.834764+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 2,
+  "source": "205",
+  "timestamp": "2025-03-18 07:39:23.716257",
+  "message": "<134>1 2025-03-18T07:39:22.461503+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:39:22.471571+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 3,
+  "source": "205",
+  "timestamp": "2025-03-18 07:39:44.31539",
+  "message": "<134>1 2025-03-18T07:39:42.864821+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:39:42.882859+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 4,
+  "source": "205",
+  "timestamp": "2025-03-18 07:40:03.8749",
+  "message": "<134>1 2025-03-18T07:40:02.756454+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:40:02.767932+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 5,
+  "source": "205",
+  "timestamp": "2025-03-18 07:40:24.031235",
+  "message": "<134>1 2025-03-18T07:40:22.883347+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:40:22.901981+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 6,
+  "source": "205",
+  "timestamp": "2025-03-18 07:40:43.997912",
+  "message": "<134>1 2025-03-18T07:40:42.725413+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:40:42.741353+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 7,
+  "source": "205",
+  "timestamp": "2025-03-18 07:41:03.784272",
+  "message": "<134>1 2025-03-18T07:41:02.704413+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:41:02.724166+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 8,
+  "source": "204",
+  "timestamp": "2025-03-18 07:41:23.848781",
+  "message": "<134>1 2025-03-18T07:41:22.70591+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n332 <134>1 2025-03-18T07:41:22.71592+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 9,
+  "source": "205",
+  "timestamp": "2025-03-18 07:41:43.702279",
+  "message": "<134>1 2025-03-18T07:41:42.632482+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:41:42.655239+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 10,
+  "source": "205",
+  "timestamp": "2025-03-18 07:42:03.874574",
+  "message": "<134>1 2025-03-18T07:42:02.612078+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n332 <134>1 2025-03-18T07:42:02.62252+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.04MB sample#memory_rss=123.68MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 11,
+  "source": "254",
+  "timestamp": "2025-03-18 07:42:07.150847",
+  "message": "<158>1 2025-03-18T07:42:05.674768+00:00 host heroku router - at=info method=GET path=\"/\" host=www.kustudyhub.live request_id=776469a1-9108-41fc-9784-2469683ba7ae fwd=\"102.213.49.41\" dyno=web.1 connect=0ms service=1ms status=200 bytes=5778 protocol=https"
+}, {
+  "id": 12,
+  "source": "272",
+  "timestamp": "2025-03-18 07:42:07.880051",
+  "message": "<158>1 2025-03-18T07:42:06.252822+00:00 host heroku router - at=info method=GET path=\"/static/css/home.css\" host=www.kustudyhub.live request_id=0de51742-1c7b-485e-9faa-640b41f4614d fwd=\"102.213.49.41\" dyno=web.1 connect=0ms service=1ms status=304 bytes=161 protocol=https"
+}, {
+  "id": 13,
+  "source": "268",
+  "timestamp": "2025-03-18 07:42:09.352775",
+  "message": "<158>1 2025-03-18T07:42:08.011021+00:00 host heroku router - at=info method=GET path=\"/api/units/\" host=www.kustudyhub.live request_id=6036c7c8-e708-4971-b723-a0ed6c50f2ff fwd=\"102.213.49.41\" dyno=web.1 connect=0ms service=1311ms status=200 bytes=14555 protocol=https"
+}, {
+  "id": 14,
+  "source": "245",
+  "timestamp": "2025-03-18 07:42:09.708671",
+  "message": "<190>1 2025-03-18T07:42:05.674526+00:00 host app web.1 - 10.1.52.53 - - [18/Mar/2025:07:42:05 +0000] \"GET / HTTP/1.1\" 200 5496 \"-\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 15,
+  "source": "288",
+  "timestamp": "2025-03-18 07:42:09.71219",
+  "message": "<190>1 2025-03-18T07:42:06.252562+00:00 host app web.1 - 10.1.52.53 - - [18/Mar/2025:07:42:06 +0000] \"GET /static/css/home.css HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n285 <190>1 2025-03-18T07:42:06.25388+00:00 host app web.1 - 10.1.8.4 - - [18/Mar/2025:07:42:06 +0000] \"GET /static/js/slider.js HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 16,
+  "source": "272",
+  "timestamp": "2025-03-18 07:42:09.769214",
+  "message": "<158>1 2025-03-18T07:42:06.254201+00:00 host heroku router - at=info method=GET path=\"/static/js/slider.js\" host=www.kustudyhub.live request_id=ee329c3e-1e3c-4112-b328-57f8f8f32a13 fwd=\"102.213.49.41\" dyno=web.1 connect=0ms service=0ms status=304 bytes=161 protocol=https"
+}, {
+  "id": 17,
+  "source": "258",
+  "timestamp": "2025-03-18 07:42:10.019386",
+  "message": "<158>1 2025-03-18T07:42:06.771706+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=a4ea626f-7b31-41a8-8253-ef421f3a5d84 fwd=\"102.213.49.41\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 18,
+  "source": "276",
+  "timestamp": "2025-03-18 07:42:10.051049",
+  "message": "<190>1 2025-03-18T07:42:06.771267+00:00 host app web.1 - 10.1.52.53 - - [18/Mar/2025:07:42:06 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 19,
+  "source": "273",
+  "timestamp": "2025-03-18 07:42:10.628499",
+  "message": "<158>1 2025-03-18T07:42:07.235258+00:00 host heroku router - at=info method=GET path=\"/static/manifest.json\" host=www.kustudyhub.live request_id=8a96b204-4025-4996-8ec3-f344079e36d2 fwd=\"102.213.49.41\" dyno=web.1 connect=2ms service=0ms status=304 bytes=160 protocol=https"
+}, {
+  "id": 20,
+  "source": "281",
+  "timestamp": "2025-03-18 07:42:11.244791",
+  "message": "<190>1 2025-03-18T07:42:08.010667+00:00 host app web.1 - 10.1.8.4 - - [18/Mar/2025:07:42:08 +0000] \"GET /api/units/ HTTP/1.1\" 200 14280 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n281 <190>1 2025-03-18T07:42:08.254223+00:00 host app web.1 - 10.1.52.53 - - [18/Mar/2025:07:42:08 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/sw.js\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 21,
+  "source": "258",
+  "timestamp": "2025-03-18 07:42:12.779815",
+  "message": "<158>1 2025-03-18T07:42:08.254742+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=3819ad9d-8a3d-4641-ab63-1d58c71c7bb5 fwd=\"102.213.49.41\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 22,
+  "source": "288",
+  "timestamp": "2025-03-18 07:42:13.803217",
+  "message": "<190>1 2025-03-18T07:42:07.235055+00:00 host app web.1 - 10.1.0.89 - - [18/Mar/2025:07:42:07 +0000] \"GET /static/manifest.json HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 23,
+  "source": "205",
+  "timestamp": "2025-03-18 07:42:24.164464",
+  "message": "<134>1 2025-03-18T07:42:23.001342+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:42:23.014272+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.05MB sample#memory_rss=123.69MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 24,
+  "source": "205",
+  "timestamp": "2025-03-18 07:42:44.639355",
+  "message": "<134>1 2025-03-18T07:42:42.533323+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:42:42.543541+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.05MB sample#memory_rss=123.69MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 25,
+  "source": "252",
+  "timestamp": "2025-03-18 07:42:59.374705",
+  "message": "<158>1 2025-03-18T07:42:58.06297+00:00 host heroku router - at=info method=GET path=\"/\" host=www.kustudyhub.live request_id=5fe205db-38bc-4968-893f-b1576f836426 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=5778 protocol=https"
+}, {
+  "id": 26,
+  "source": "246",
+  "timestamp": "2025-03-18 07:42:59.694337",
+  "message": "<190>1 2025-03-18T07:42:58.062754+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:42:58 +0000] \"GET / HTTP/1.1\" 200 5496 \"-\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 27,
+  "source": "272",
+  "timestamp": "2025-03-18 07:42:59.976743",
+  "message": "<158>1 2025-03-18T07:42:58.737749+00:00 host heroku router - at=info method=GET path=\"/static/js/slider.js\" host=www.kustudyhub.live request_id=9ff9f23e-aff3-4cfa-adc8-de8471f274ba fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=4466 protocol=https"
+}, {
+  "id": 28,
+  "source": "288",
+  "timestamp": "2025-03-18 07:43:01.46658",
+  "message": "<190>1 2025-03-18T07:42:58.556027+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:42:58 +0000] \"GET /static/css/home.css HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n289 <190>1 2025-03-18T07:42:58.737523+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:42:58 +0000] \"GET /static/js/slider.js HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 29,
+  "source": "272",
+  "timestamp": "2025-03-18 07:43:01.723699",
+  "message": "<158>1 2025-03-18T07:42:58.556277+00:00 host heroku router - at=info method=GET path=\"/static/css/home.css\" host=www.kustudyhub.live request_id=6ddb4c0c-34a2-4f2b-9405-c59270dc3df0 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=5321 protocol=https"
+}, {
+  "id": 30,
+  "source": "257",
+  "timestamp": "2025-03-18 07:43:02.811375",
+  "message": "<158>1 2025-03-18T07:43:01.098247+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=32ac6bd1-2c2c-424a-93ba-17c564ae361b fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 31,
+  "source": "261",
+  "timestamp": "2025-03-18 07:43:02.870511",
+  "message": "<158>1 2025-03-18T07:43:01.136294+00:00 host heroku router - at=info method=GET path=\"/api/units\" host=www.kustudyhub.live request_id=ab878592-d9f1-4451-b97f-fe490cbd7c12 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=301 bytes=308 protocol=https"
+}, {
+  "id": 32,
+  "source": "284",
+  "timestamp": "2025-03-18 07:43:03.470982",
+  "message": "<190>1 2025-03-18T07:43:02.169458+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:02 +0000] \"GET /api/units/ HTTP/1.1\" 200 14280 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 33,
+  "source": "281",
+  "timestamp": "2025-03-18 07:43:04.21694",
+  "message": "<190>1 2025-03-18T07:43:02.80932+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:43:02 +0000] \"GET /favicon.ico HTTP/1.1\" 404 179 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 34,
+  "source": "276",
+  "timestamp": "2025-03-18 07:43:04.825025",
+  "message": "<190>1 2025-03-18T07:43:01.098034+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:43:01 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n278 <190>1 2025-03-18T07:43:01.13608+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:01 +0000] \"GET /api/units HTTP/1.1\" 301 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 35,
+  "source": "263",
+  "timestamp": "2025-03-18 07:43:05.228002",
+  "message": "<158>1 2025-03-18T07:43:02.809686+00:00 host heroku router - at=info method=GET path=\"/favicon.ico\" host=www.kustudyhub.live request_id=c460183f-0ba7-452d-bba5-46dac331a559 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=404 bytes=467 protocol=https"
+}, {
+  "id": 36,
+  "source": "204",
+  "timestamp": "2025-03-18 07:43:06.547033",
+  "message": "<134>1 2025-03-18T07:43:02.88266+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:43:02.897751+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 37,
+  "source": "282",
+  "timestamp": "2025-03-18 07:43:07.565097",
+  "message": "<190>1 2025-03-18T07:43:06.142414+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:06 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/sw.js\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 38,
+  "source": "256",
+  "timestamp": "2025-03-18 07:43:08.59102",
+  "message": "<158>1 2025-03-18T07:43:06.14283+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=4e599c14-edbf-4398-9b12-f704afbcdd42 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 39,
+  "source": "271",
+  "timestamp": "2025-03-18 07:43:09.304313",
+  "message": "<158>1 2025-03-18T07:43:03.61156+00:00 host heroku router - at=info method=GET path=\"/static/manifest.json\" host=www.kustudyhub.live request_id=127cf387-94c0-497e-9ed1-d0de0110ede8 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=823 protocol=https"
+}, {
+  "id": 40,
+  "source": "289",
+  "timestamp": "2025-03-18 07:43:10.43334",
+  "message": "<190>1 2025-03-18T07:43:03.611357+00:00 host app web.1 - 10.1.22.67 - - [18/Mar/2025:07:43:03 +0000] \"GET /static/manifest.json HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 41,
+  "source": "205",
+  "timestamp": "2025-03-18 07:43:23.755815",
+  "message": "<134>1 2025-03-18T07:43:22.481774+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:43:22.491921+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 42,
+  "source": "289",
+  "timestamp": "2025-03-18 07:43:24.067511",
+  "message": "<190>1 2025-03-18T07:43:22.500125+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:43:22 +0000] \"GET /units/?unitId=118 HTTP/1.1\" 200 3227 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 43,
+  "source": "271",
+  "timestamp": "2025-03-18 07:43:25.169531",
+  "message": "<158>1 2025-03-18T07:43:23.913547+00:00 host heroku router - at=info method=GET path=\"/static/js/units.js\" host=www.kustudyhub.live request_id=f2593388-4b1a-455b-bebc-2d6dde97ffa9 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=5389 protocol=https"
+}, {
+  "id": 44,
+  "source": "305",
+  "timestamp": "2025-03-18 07:43:25.482023",
+  "message": "<190>1 2025-03-18T07:43:23.913308+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:23 +0000] \"GET /static/js/units.js HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 45,
+  "source": "273",
+  "timestamp": "2025-03-18 07:43:25.539302",
+  "message": "<158>1 2025-03-18T07:43:22.907192+00:00 host heroku router - at=info method=GET path=\"/static/css/units.css\" host=www.kustudyhub.live request_id=19de0cf5-4b8e-467d-b535-d677416ef8b1 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=2629 protocol=https"
+}, {
+  "id": 46,
+  "source": "270",
+  "timestamp": "2025-03-18 07:43:25.555693",
+  "message": "<158>1 2025-03-18T07:43:22.500402+00:00 host heroku router - at=info method=GET path=\"/units/?unitId=118\" host=www.kustudyhub.live request_id=5ba5189e-8f61-4463-b815-37ed8e65dec2 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=3509 protocol=https"
+}, {
+  "id": 47,
+  "source": "306",
+  "timestamp": "2025-03-18 07:43:25.733327",
+  "message": "<190>1 2025-03-18T07:43:22.907008+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:43:22 +0000] \"GET /static/css/units.css HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 48,
+  "source": "265",
+  "timestamp": "2025-03-18 07:43:26.967316",
+  "message": "<158>1 2025-03-18T07:43:25.881848+00:00 host heroku router - at=info method=GET path=\"/api/units/\" host=www.kustudyhub.live request_id=bbdc7b23-ddb6-4c70-868f-23f9e8763905 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=95ms status=200 bytes=14555 protocol=https"
+}, {
+  "id": 49,
+  "source": "301",
+  "timestamp": "2025-03-18 07:43:27.328624",
+  "message": "<190>1 2025-03-18T07:43:25.881173+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:25 +0000] \"GET /api/units/ HTTP/1.1\" 200 14280 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 50,
+  "source": "282",
+  "timestamp": "2025-03-18 07:43:29.069436",
+  "message": "<190>1 2025-03-18T07:43:27.327934+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:27 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/sw.js\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 51,
+  "source": "308",
+  "timestamp": "2025-03-18 07:43:29.38255",
+  "message": "<190>1 2025-03-18T07:43:26.901261+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:26 +0000] \"GET /api/unit/118/pdfs/ HTTP/1.1\" 200 2581 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 52,
+  "source": "273",
+  "timestamp": "2025-03-18 07:43:30.396264",
+  "message": "<158>1 2025-03-18T07:43:26.901781+00:00 host heroku router - at=info method=GET path=\"/api/unit/118/pdfs/\" host=www.kustudyhub.live request_id=c1332765-d961-4983-abc4-b07895ff23af fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=208ms status=200 bytes=2855 protocol=https"
+}, {
+  "id": 53,
+  "source": "257",
+  "timestamp": "2025-03-18 07:43:31.623633",
+  "message": "<158>1 2025-03-18T07:43:27.328217+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=1e629c94-3980-4281-ab8f-e12093d2013f fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 54,
+  "source": "205",
+  "timestamp": "2025-03-18 07:43:43.914884",
+  "message": "<134>1 2025-03-18T07:43:42.791636+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:43:42.817577+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 55,
+  "source": "392",
+  "timestamp": "2025-03-18 07:43:59.991157",
+  "message": "<158>1 2025-03-18T07:43:58.671056+00:00 host heroku router - at=info method=GET path=\"/reader?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf\" host=www.kustudyhub.live request_id=165e8f0c-da57-40bb-bb88-fe2b5a665bed fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=301 bytes=439 protocol=https"
+}, {
+  "id": 56,
+  "source": "427",
+  "timestamp": "2025-03-18 07:44:00.318323",
+  "message": "<190>1 2025-03-18T07:43:58.670702+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:58 +0000] \"GET /reader?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf HTTP/1.1\" 301 0 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 57,
+  "source": "394",
+  "timestamp": "2025-03-18 07:44:01.251827",
+  "message": "<158>1 2025-03-18T07:43:59.850983+00:00 host heroku router - at=info method=GET path=\"/reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf\" host=www.kustudyhub.live request_id=67a35b4f-18ff-4705-8767-1911d0b2deef fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=1473 protocol=https"
+}, {
+  "id": 366,
+  "source": "157",
+  "timestamp": "2025-03-18 07:55:27.620427",
+  "message": "<172>1 2025-03-18T07:55:25.363263+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T07:54:31.377913+00:00."
+}, {
+  "id": 58,
+  "source": "431",
+  "timestamp": "2025-03-18 07:44:01.2551",
+  "message": "<190>1 2025-03-18T07:43:59.850563+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:43:59 +0000] \"GET /reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf HTTP/1.1\" 200 1191 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 59,
+  "source": "436",
+  "timestamp": "2025-03-18 07:44:02.260319",
+  "message": "<190>1 2025-03-18T07:44:00.326024+00:00 host app web.1 - 10.1.55.141 - - [18/Mar/2025:07:44:00 +0000] \"GET /static/css/pdf-reader.css HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n429 <190>1 2025-03-18T07:44:00.326362+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:44:00 +0000] \"GET /static/css/home.css HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n434 <190>1 2025-03-18T07:44:00.372693+00:00 host app web.1 - 10.1.29.166 - - [18/Mar/2025:07:44:00 +0000] \"GET /static/js/pdf-reader.js HTTP/1.1\" 200 0 \"https://www.kustudyhub.live/reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468667%2FkuStudyHub%2FSCO113%2Fpbunvgccgcbyvo2jcg6v.pdf\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 60,
+  "source": "278",
+  "timestamp": "2025-03-18 07:44:02.282887",
+  "message": "<158>1 2025-03-18T07:44:00.326446+00:00 host heroku router - at=info method=GET path=\"/static/css/pdf-reader.css\" host=www.kustudyhub.live request_id=c245ec95-59b4-4a6a-8ba1-dd5aa5484fdc fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=1092 protocol=https"
+}, {
+  "id": 61,
+  "source": "156",
+  "timestamp": "2025-03-18 07:44:03.291521",
+  "message": "<172>1 2025-03-18T07:44:02.283977+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T07:43:08.99958+00:00."
+}, {
+  "id": 62,
+  "source": "276",
+  "timestamp": "2025-03-18 07:44:03.388407",
+  "message": "<158>1 2025-03-18T07:44:00.372897+00:00 host heroku router - at=info method=GET path=\"/static/js/pdf-reader.js\" host=www.kustudyhub.live request_id=eb673fa2-a97e-42ac-ac73-1d293e9c2796 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=200 bytes=3844 protocol=https"
+}, {
+  "id": 63,
+  "source": "271",
+  "timestamp": "2025-03-18 07:44:03.680715",
+  "message": "<158>1 2025-03-18T07:44:00.326849+00:00 host heroku router - at=info method=GET path=\"/static/css/home.css\" host=www.kustudyhub.live request_id=22c08718-491e-4510-80d7-b7d94acdcf5a fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=304 bytes=161 protocol=https"
+}, {
+  "id": 64,
+  "source": "257",
+  "timestamp": "2025-03-18 07:44:04.806565",
+  "message": "<158>1 2025-03-18T07:44:03.512888+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=95ae7fc2-d356-438f-8f1f-c674ec6ed8e7 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=2ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 65,
+  "source": "157",
+  "timestamp": "2025-03-18 07:44:05.424335",
+  "message": "<172>1 2025-03-18T07:44:04.339822+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T07:43:10.830527+00:00."
+}, {
+  "id": 66,
+  "source": "282",
+  "timestamp": "2025-03-18 07:44:06.899395",
+  "message": "<190>1 2025-03-18T07:44:03.512685+00:00 host app web.1 - 10.1.29.166 - - [18/Mar/2025:07:44:03 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/sw.js\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 67,
+  "source": "204",
+  "timestamp": "2025-03-18 07:44:08.903308",
+  "message": "<134>1 2025-03-18T07:44:02.41423+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:44:02.424845+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 68,
+  "source": "157",
+  "timestamp": "2025-03-18 07:44:08.911672",
+  "message": "<172>1 2025-03-18T07:44:07.492464+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T07:43:10.824077+00:00."
+}, {
+  "id": 69,
+  "source": "289",
+  "timestamp": "2025-03-18 07:44:22.160835",
+  "message": "<190>1 2025-03-18T07:44:20.123164+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:44:20 +0000] \"GET /units/?unitId=207 HTTP/1.1\" 200 3227 \"https://www.kustudyhub.live/\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 70,
+  "source": "271",
+  "timestamp": "2025-03-18 07:44:22.229076",
+  "message": "<158>1 2025-03-18T07:44:20.123753+00:00 host heroku router - at=info method=GET path=\"/units/?unitId=207\" host=www.kustudyhub.live request_id=d930fe48-12d2-4ef3-a1d1-57dad9831766 fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=200 bytes=3509 protocol=https"
+}, {
+  "id": 71,
+  "source": "273",
+  "timestamp": "2025-03-18 07:44:23.273017",
+  "message": "<158>1 2025-03-18T07:44:22.053357+00:00 host heroku router - at=info method=GET path=\"/api/unit/207/pdfs/\" host=www.kustudyhub.live request_id=31d81b35-0348-4997-bc76-560f973106af fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=189ms status=200 bytes=554 protocol=https"
+}, {
+  "id": 72,
+  "source": "271",
+  "timestamp": "2025-03-18 07:44:23.862108",
+  "message": "<158>1 2025-03-18T07:44:20.499701+00:00 host heroku router - at=info method=GET path=\"/static/js/units.js\" host=www.kustudyhub.live request_id=bd81c089-48ff-4708-a026-8d919aa581dd fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=304 bytes=161 protocol=https"
+}, {
+  "id": 73,
+  "source": "304",
+  "timestamp": "2025-03-18 07:44:24.486771",
+  "message": "<190>1 2025-03-18T07:44:20.499343+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:44:20 +0000] \"GET /static/js/units.js HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/units/?unitId=207\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\"\n305 <190>1 2025-03-18T07:44:20.502961+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:44:20 +0000] \"GET /static/css/home.css HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/units/?unitId=207\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 74,
+  "source": "306",
+  "timestamp": "2025-03-18 07:44:24.557971",
+  "message": "<190>1 2025-03-18T07:44:20.813577+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:44:20 +0000] \"GET /static/css/units.css HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/units/?unitId=207\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 75,
+  "source": "266",
+  "timestamp": "2025-03-18 07:44:24.599987",
+  "message": "<158>1 2025-03-18T07:44:21.233928+00:00 host heroku router - at=info method=GET path=\"/api/units/\" host=www.kustudyhub.live request_id=dd8bf684-21e9-4711-99c8-3242a486ff2f fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=95ms status=200 bytes=14555 protocol=https"
+}, {
+  "id": 76,
+  "source": "276",
+  "timestamp": "2025-03-18 07:44:25.593595",
+  "message": "<158>1 2025-03-18T07:44:24.237824+00:00 host heroku router - at=info method=GET path=\"/static/js/pdf-reader.js\" host=www.kustudyhub.live request_id=ed9d0e93-3c70-4bb8-ba89-a0d4d16743e0 fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=0ms status=304 bytes=160 protocol=https"
+}, {
+  "id": 77,
+  "source": "258",
+  "timestamp": "2025-03-18 07:44:26.405637",
+  "message": "<158>1 2025-03-18T07:44:22.734147+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=e9721373-7f8e-472d-a352-003137df447e fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 1265,
+  "source": "157",
+  "timestamp": "2025-03-18 09:12:32.657874",
+  "message": "<172>1 2025-03-18T09:12:32.469237+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T09:12:04.283199+00:00."
+}, {
+  "id": 78,
+  "source": "395",
+  "timestamp": "2025-03-18 07:44:27.437644",
+  "message": "<158>1 2025-03-18T07:44:23.861719+00:00 host heroku router - at=info method=GET path=\"/reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468311%2FkuStudyHub%2FISC104%2Fysotpc06yfe5tyegjwul.pdf\" host=www.kustudyhub.live request_id=192911da-22d9-4841-adcb-1c92fc0f2159 fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=200 bytes=1473 protocol=https"
+}, {
+  "id": 79,
+  "source": "273",
+  "timestamp": "2025-03-18 07:44:28.454643",
+  "message": "<158>1 2025-03-18T07:44:20.813934+00:00 host heroku router - at=info method=GET path=\"/static/css/units.css\" host=www.kustudyhub.live request_id=51e27f3b-fed0-4b89-84ba-0e45e8269aeb fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=304 bytes=160 protocol=https"
+}, {
+  "id": 80,
+  "source": "280",
+  "timestamp": "2025-03-18 07:44:29.491721",
+  "message": "<190>1 2025-03-18T07:44:22.73369+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:44:22 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/sw.js\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 81,
+  "source": "429",
+  "timestamp": "2025-03-18 07:44:30.516598",
+  "message": "<190>1 2025-03-18T07:44:23.86112+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:44:23 +0000] \"GET /reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740468311%2FkuStudyHub%2FISC104%2Fysotpc06yfe5tyegjwul.pdf HTTP/1.1\" 200 1191 \"https://www.kustudyhub.live/units/?unitId=207\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 82,
+  "source": "278",
+  "timestamp": "2025-03-18 07:44:31.217922",
+  "message": "<158>1 2025-03-18T07:44:24.236369+00:00 host heroku router - at=info method=GET path=\"/static/css/pdf-reader.css\" host=www.kustudyhub.live request_id=e66fa1c3-39a7-4c25-b048-f4bd9ce7ada2 fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=304 bytes=160 protocol=https"
+}, {
+  "id": 83,
+  "source": "280",
+  "timestamp": "2025-03-18 07:44:32.349903",
+  "message": "<190>1 2025-03-18T07:44:27.03164+00:00 host app web.1 - 10.1.28.44 - - [18/Mar/2025:07:44:27 +0000] \"GET /sw.js HTTP/1.1\" 200 192 \"https://www.kustudyhub.live/sw.js\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 84,
+  "source": "258",
+  "timestamp": "2025-03-18 07:44:33.88086",
+  "message": "<158>1 2025-03-18T07:44:27.032249+00:00 host heroku router - at=info method=GET path=\"/sw.js\" host=www.kustudyhub.live request_id=9c141fc8-23e5-4ef1-bd56-a0633941820d fwd=\"102.213.49.42\" dyno=web.1 connect=0ms service=1ms status=200 bytes=471 protocol=https"
+}, {
+  "id": 85,
+  "source": "205",
+  "timestamp": "2025-03-18 07:44:44.364322",
+  "message": "<134>1 2025-03-18T07:44:42.689221+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:44:42.701298+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 86,
+  "source": "205",
+  "timestamp": "2025-03-18 07:45:03.989658",
+  "message": "<134>1 2025-03-18T07:45:02.758246+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n332 <134>1 2025-03-18T07:45:02.77167+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 87,
+  "source": "157",
+  "timestamp": "2025-03-18 07:45:08.192824",
+  "message": "<172>1 2025-03-18T07:45:07.030312+00:00 host heroku logplex - Error L10 (output buffer overflow): 3 messages dropped since 2025-03-18T07:44:28.153938+00:00."
+}, {
+  "id": 88,
+  "source": "157",
+  "timestamp": "2025-03-18 07:45:08.600905",
+  "message": "<172>1 2025-03-18T07:45:07.492611+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T07:44:28.564837+00:00."
+}, {
+  "id": 89,
+  "source": "157",
+  "timestamp": "2025-03-18 07:45:21.531598",
+  "message": "<172>1 2025-03-18T07:45:20.585251+00:00 host heroku logplex - Error L10 (output buffer overflow): 1 messages dropped since 2025-03-18T07:44:28.159336+00:00."
+}, {
+  "id": 90,
+  "source": "205",
+  "timestamp": "2025-03-18 07:45:23.682421",
+  "message": "<134>1 2025-03-18T07:45:22.655409+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:45:22.664796+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 91,
+  "source": "157",
+  "timestamp": "2025-03-18 07:45:24.021138",
+  "message": "<172>1 2025-03-18T07:45:22.827902+00:00 host heroku logplex - Error L10 (output buffer overflow): 2 messages dropped since 2025-03-18T07:44:29.286191+00:00."
+}, {
+  "id": 92,
+  "source": "205",
+  "timestamp": "2025-03-18 07:45:44.033635",
+  "message": "<134>1 2025-03-18T07:45:42.628239+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:45:42.650563+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 93,
+  "source": "205",
+  "timestamp": "2025-03-18 07:46:03.790138",
+  "message": "<134>1 2025-03-18T07:46:02.590032+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#load_avg_1m=0.00 sample#load_avg_5m=0.00 sample#load_avg_15m=0.00\n333 <134>1 2025-03-18T07:46:02.603364+00:00 host heroku web.1 - source=web.1 dyno=heroku.440712070.e5b1c909-743a-4285-86ae-bd0eeebe8dab sample#memory_total=134.12MB sample#memory_rss=123.75MB sample#memory_cache=10.36MB sample#memory_swap=0.00MB sample#memory_pgpgin=1537pages sample#memory_pgpgout=122pages sample#memory_quota=512.00MB"
+}, {
+  "id": 94,
+  "source": "391",
+  "timestamp": "2025-03-18 07:46:14.552359",
+  "message": "<158>1 2025-03-18T07:46:13.28648+00:00 host heroku router - at=info method=GET path=\"/reader?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740829975%2FkuStudyHub%2FSCO113%2Fg3tmxmxsx7vhyats95kt.pdf\" host=www.kustudyhub.live request_id=65bfc0f9-f6d0-4ee8-ad30-f90696f06cc2 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=301 bytes=439 protocol=https"
+}, {
+  "id": 95,
+  "source": "426",
+  "timestamp": "2025-03-18 07:46:14.586581",
+  "message": "<190>1 2025-03-18T07:46:13.286071+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:46:13 +0000] \"GET /reader?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740829975%2FkuStudyHub%2FSCO113%2Fg3tmxmxsx7vhyats95kt.pdf HTTP/1.1\" 301 0 \"https://www.kustudyhub.live/units/?unitId=118\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 96,
+  "source": "271",
+  "timestamp": "2025-03-18 07:46:15.27243",
+  "message": "<158>1 2025-03-18T07:46:14.081345+00:00 host heroku router - at=info method=GET path=\"/static/css/home.css\" host=www.kustudyhub.live request_id=dff9b97f-f7a2-4383-85fc-e091a0a9cbb9 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=1ms status=304 bytes=161 protocol=https"
+}, {
+  "id": 97,
+  "source": "429",
+  "timestamp": "2025-03-18 07:46:15.334621",
+  "message": "<190>1 2025-03-18T07:46:14.080922+00:00 host app web.1 - 10.1.51.24 - - [18/Mar/2025:07:46:14 +0000] \"GET /static/css/home.css HTTP/1.1\" 304 0 \"https://www.kustudyhub.live/reader/?filelink=https%3A%2F%2Fres.cloudinary.com%2Fdr0tpf6dd%2Fimage%2Fupload%2Fv1740829975%2FkuStudyHub%2FSCO113%2Fg3tmxmxsx7vhyats95kt.pdf\" \"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36\""
+}, {
+  "id": 98,
+  "source": "275",
+  "timestamp": "2025-03-18 07:46:16.182681",
+  "message": "<158>1 2025-03-18T07:46:14.966945+00:00 host heroku router - at=info method=GET path=\"/static/js/pdf-reader.js\" host=www.kustudyhub.live request_id=d86d653e-d166-40f4-a521-8c75ff87caa5 fwd=\"41.89.10.241\" dyno=web.1 connect=0ms service=0ms status=304 bytes=160 protocol=https"
+}]

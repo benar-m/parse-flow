@@ -8,6 +8,26 @@ import (
 	"strings"
 )
 
+// remove the syslog priority and version from Heroku log
+func stripSyslogPrefix(logLine string) string {
+	if len(logLine) == 0 || logLine[0] != '<' {
+		return logLine
+	}
+
+	// Find closing
+	closeIdx := strings.Index(logLine, ">")
+	if closeIdx == -1 {
+		return logLine
+	}
+	remaining := logLine[closeIdx+1:]
+	spaceIdx := strings.Index(remaining, " ")
+	if spaceIdx == -1 {
+		return logLine
+	}
+
+	return remaining[spaceIdx+1:]
+}
+
 // Handles a post request from the logplexer and verifies then writes the log to Raw Log Chan
 func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 	//verify first - specific to heroku -- (Parser will be compliant to RFC5424 on https drains)
@@ -18,12 +38,12 @@ func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNoContent)
 		return
 	}
-	if !strings.HasPrefix(r.UserAgent(), "Logplex/v") {
-		log.Println("Request Received From an unknown uA")
-		w.Header().Set("Content-Lenght", "0")
+	userAgent := r.UserAgent()
+	if !strings.HasPrefix(userAgent, "Logplex/v") && !strings.HasPrefix(userAgent, "logfwd") {
+		log.Printf("Request Received From %v\n", userAgent)
+		w.Header().Set("Content-Length", "0")
 		w.WriteHeader(http.StatusNoContent)
 		return
-
 	}
 	msgLen := r.Header.Get("Logplex-Msg-Count")
 	ml, err := strconv.Atoi(msgLen)
@@ -39,8 +59,14 @@ func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if a.Dc.Add(requestId) {
-		a.RawLogChan <- body
+		cleanedBody := stripSyslogPrefix(string(body))
 
+		//Filter to Router logs for now, will handle system logs later
+		if strings.Contains(cleanedBody, "heroku router") {
+			a.RawLogChan <- []byte(cleanedBody)
+		} else {
+			log.Printf("Skipping non-router log: %s", cleanedBody)
+		}
 	} else {
 		log.Println("Already Processed")
 	}

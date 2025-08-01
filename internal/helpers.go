@@ -25,6 +25,9 @@ func NewDedupeCache(s int) *DedupeCache {
 	}
 }
 func (d *DedupeCache) Add(msgId string) bool {
+	d.mu.Lock()
+	defer d.mu.Unlock()
+
 	if _, exists := d.Lookup[msgId]; exists {
 		return false
 	}
@@ -39,7 +42,6 @@ func (d *DedupeCache) Add(msgId string) bool {
 	d.WritePos = (d.WritePos + 1) % d.Size
 
 	return true
-
 }
 func ParseDuration(s string) (t time.Duration) {
 	t, err := time.ParseDuration(s)

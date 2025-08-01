@@ -1,2 +1,4 @@
 *.BIN
 *.db
+ssl
+.env

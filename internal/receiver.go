@@ -38,12 +38,12 @@ func (a *App) LogReceiver(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNoContent)
 		return
 	}
-	if !strings.HasPrefix(r.UserAgent(), "Logplex/v") {
-		log.Println("Request Received From an unknown uA")
-		w.Header().Set("Content-Lenght", "0")
+	userAgent := r.UserAgent()
+	if !strings.HasPrefix(userAgent, "Logplex/v") && !strings.HasPrefix(userAgent, "logfwd") {
+		log.Printf("Request Received From %v\n", userAgent)
+		w.Header().Set("Content-Length", "0")
 		w.WriteHeader(http.StatusNoContent)
 		return
-
 	}
 	msgLen := r.Header.Get("Logplex-Msg-Count")
 	ml, err := strconv.Atoi(msgLen)

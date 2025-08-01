@@ -1,41 +1,50 @@
+# Single container with Go app + nginx
 FROM golang:1.24.4-alpine AS builder
 
-RUN apk add --no-cache gcc musl-dev sqlite-dev
-
+# Build
+RUN apk add --no-cache --update gcc musl-dev sqlite-dev
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
-
 COPY . .
-RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo -o parseflow cmd/server/main.go
+RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo \
+    -ldflags '-w -s -extldflags "-static"' \
+    -o parseflow cmd/server/main.go
 
-FROM alpine:latest
+FROM nginx:alpine
 
-RUN apk --no-cache add ca-certificates sqlite
+RUN apk add --no-cache supervisor
 
-RUN addgroup -g 1001 -S parseflow && \
-    adduser -u 1001 -S parseflow -G parseflow
+# Go application
+COPY --from=builder /app/parseflow /usr/local/bin/parseflow
+COPY --from=builder /app/data/IP2LOCATION-LITE-DB1.IPV6.BIN /app/data/
 
-WORKDIR /app
-RUN mkdir -p /app/data /app/logs && \
-    chown -R parseflow:parseflow /app
+RUN mkdir -p /etc/nginx/ssl
+COPY ssl/cert.pem /etc/nginx/ssl/cert.pem
+COPY ssl/key.pem /etc/nginx/ssl/key.pem
+COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=builder /app/parseflow .
-COPY --chown=parseflow:parseflow data/IP2LOCATION-LITE-DB1.IPV6.BIN ./data/
+# supervisor config
+RUN mkdir -p /etc/supervisor/conf.d && \
+    echo '[supervisord]' > /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'nodaemon=true' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'user=root' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo '' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo '[program:parseflow]' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'command=/usr/local/bin/parseflow' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'autostart=true' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'autorestart=true' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'environment=PORT=8080,DATABASE_PATH=/app/data/logs.db,RAW_LOG_CHAN_SIZE=2000,PARSED_LOG_CHAN_SIZE=2000,METRIC_CHAN_SIZE=200,BATCH_SIZE=200,FLUSH_INTERVAL=3s,SNAPSHOT_INTERVAL=30s,METRICS_API_KEY=%(ENV_METRICS_API_KEY)s' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo '' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo '[program:nginx]' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'command=nginx -g "daemon off;"' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'autostart=true' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'autorestart=true' >> /etc/supervisor/conf.d/supervisord.conf
 
-USER parseflow
-EXPOSE 5000
+RUN mkdir -p /app/data && chmod 755 /app/data && \
+    chmod 644 /etc/nginx/ssl/cert.pem && \
+    chmod 600 /etc/nginx/ssl/key.pem
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost:5000/metrics || exit 1
+EXPOSE 80 443
 
-ENV PORT=5000 \
-    DATABASE_PATH=/app/logs/logs.db \
-    RAW_LOG_CHAN_SIZE=1000 \
-    PARSED_LOG_CHAN_SIZE=1000 \
-    METRIC_CHAN_SIZE=100 \
-    BATCH_SIZE=100 \
-    FLUSH_INTERVAL=5s \
-    SNAPSHOT_INTERVAL=1m
-
-CMD ["./parseflow"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

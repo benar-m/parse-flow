@@ -15,7 +15,7 @@ func main() {
 	dc := internal.NewDedupeCache(100)
 	rawLogChan := make(chan []byte, config.RawLogChanSize)
 	parsedLogChan := make(chan *internal.ParsedLog, config.ParsedLogChanSize)
-	db, err := ip2.OpenDB("./data/IP2LOCATION-LITE-DB1.IPV6.BIN")
+	db, err := ip2.OpenDB("/app/data/IP2LOCATION-LITE-DB1.IPV6.BIN")
 	if err != nil {
 		fmt.Println(err)
 		log.Fatalf("Failed to open ip2location DB")

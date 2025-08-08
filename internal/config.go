@@ -8,7 +8,7 @@ import (
 
 type Config struct {
 	Port              string
-	DatabasePath      string
+	DatabaseURL       string
 	RawLogChanSize    int
 	ParsedLogChanSize int
 	MetricChanSize    int
@@ -20,7 +20,7 @@ type Config struct {
 func LoadConfig() *Config {
 	return &Config{
 		Port:              getEnv("PORT", "5000"),
-		DatabasePath:      getEnv("DATABASE_PATH", "./logs.db"),
+		DatabaseURL:       getEnv("DATABASE_URL", ""),
 		RawLogChanSize:    getEnvInt("RAW_LOG_CHAN_SIZE", 1000),
 		ParsedLogChanSize: getEnvInt("PARSED_LOG_CHAN_SIZE", 1000),
 		MetricChanSize:    getEnvInt("METRIC_CHAN_SIZE", 100),

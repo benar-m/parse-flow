@@ -8,17 +8,28 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/lib/pq"
 )
 
 // Helper function to create a test database for writer tests
 func createWriterTestDB(t *testing.T) *sql.DB {
 	t.Helper()
 
-	db, err := sql.Open("sqlite3", ":memory:")
+	// Use TEST_DATABASE_URL environment variable for tests
+	// If not set, skip tests that require a database
+	testDBURL := os.Getenv("TEST_DATABASE_URL")
+	if testDBURL == "" {
+		t.Skip("TEST_DATABASE_URL not set, skipping database tests")
+	}
+
+	db, err := sql.Open("postgres", testDBURL)
 	if err != nil {
 		t.Fatalf("Failed to open test database: %v", err)
 	}
+
+	// Clean up any existing test tables
+	_, _ = db.Exec("DROP TABLE IF EXISTS raw_logs")
+	_, _ = db.Exec("DROP TABLE IF EXISTS metric_snapshots")
 
 	return db
 }
@@ -142,7 +153,7 @@ func TestInitTables(t *testing.T) {
 				tables := []string{"raw_logs", "metric_snapshots"}
 				for _, table := range tables {
 					var count int
-					query := "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=?"
+					query := "SELECT COUNT(*) FROM information_schema.tables WHERE table_name = $1"
 					err := db.QueryRow(query, table).Scan(&count)
 					if err != nil {
 						t.Errorf("Failed to check table %s: %v", table, err)
@@ -368,15 +379,17 @@ func TestWriteSnapshotToDb(t *testing.T) {
 }
 
 func TestStartDbWriter_Integration(t *testing.T) {
-	// Create temporary database file for integration test
-	tmpFile := "/tmp/test_logs.db"
-	defer os.Remove(tmpFile)
+	// Use TEST_DATABASE_URL for integration test
+	testDBURL := os.Getenv("TEST_DATABASE_URL")
+	if testDBURL == "" {
+		t.Skip("TEST_DATABASE_URL not set, skipping integration test")
+	}
 
 	app := createWriterTestApp(t)
 
 	// Start the writer in a goroutine
 	go func() {
-		db, err := sql.Open("sqlite3", tmpFile)
+		db, err := sql.Open("postgres", testDBURL)
 		if err != nil {
 			t.Errorf("Failed to open test database: %v", err)
 			return
@@ -402,8 +415,8 @@ func TestStartDbWriter_Integration(t *testing.T) {
 	// Give some time for processing
 	time.Sleep(100 * time.Millisecond)
 
-	// Verify the database was created and has data
-	db, err := sql.Open("sqlite3", tmpFile)
+	// Verify the database has data
+	db, err := sql.Open("postgres", testDBURL)
 	if err != nil {
 		t.Fatalf("Failed to open test database for verification: %v", err)
 	}
@@ -464,7 +477,7 @@ func TestConcurrentDatabaseWrites(t *testing.T) {
 	}
 
 	// Test that batch writes work correctly sequentially
-	// (SQLite with :memory: doesn't handle true concurrent writes well in tests)
+	// (PostgreSQL test requires a real database connection for concurrent tests)
 	const numBatches = 5
 	const logsPerBatch = 10
 
@@ -496,6 +509,12 @@ func TestConcurrentDatabaseWrites(t *testing.T) {
 }
 
 func BenchmarkWriteLogToDb(b *testing.B) {
+	// Use TEST_DATABASE_URL for benchmarks
+	testDBURL := os.Getenv("TEST_DATABASE_URL")
+	if testDBURL == "" {
+		b.Skip("TEST_DATABASE_URL not set, skipping benchmark")
+	}
+
 	app := &App{
 		DbRawWriteChan: make(chan *ParsedLog, 100),
 		MetricChan:     make(chan *ParsedLog, 100),
@@ -507,11 +526,15 @@ func BenchmarkWriteLogToDb(b *testing.B) {
 		MetricsMu: sync.RWMutex{},
 	}
 
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("postgres", testDBURL)
 	if err != nil {
 		b.Fatalf("Failed to open test database: %v", err)
 	}
 	defer db.Close()
+
+	// Clean up any existing test tables
+	_, _ = db.Exec("DROP TABLE IF EXISTS raw_logs")
+	_, _ = db.Exec("DROP TABLE IF EXISTS metric_snapshots")
 
 	err = app.initTables(db)
 	if err != nil {
@@ -547,6 +570,12 @@ func BenchmarkWriteLogToDb(b *testing.B) {
 }
 
 func BenchmarkWriteBatchToDb(b *testing.B) {
+	// Use TEST_DATABASE_URL for benchmarks
+	testDBURL := os.Getenv("TEST_DATABASE_URL")
+	if testDBURL == "" {
+		b.Skip("TEST_DATABASE_URL not set, skipping benchmark")
+	}
+
 	app := &App{
 		DbRawWriteChan: make(chan *ParsedLog, 100),
 		MetricChan:     make(chan *ParsedLog, 100),
@@ -558,11 +587,15 @@ func BenchmarkWriteBatchToDb(b *testing.B) {
 		MetricsMu: sync.RWMutex{},
 	}
 
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("postgres", testDBURL)
 	if err != nil {
 		b.Fatalf("Failed to open test database: %v", err)
 	}
 	defer db.Close()
+
+	// Clean up any existing test tables
+	_, _ = db.Exec("DROP TABLE IF EXISTS raw_logs")
+	_, _ = db.Exec("DROP TABLE IF EXISTS metric_snapshots")
 
 	err = app.initTables(db)
 	if err != nil {
@@ -608,6 +641,12 @@ func BenchmarkWriteBatchToDb(b *testing.B) {
 }
 
 func BenchmarkWriteSnapshotToDb(b *testing.B) {
+	// Use TEST_DATABASE_URL for benchmarks
+	testDBURL := os.Getenv("TEST_DATABASE_URL")
+	if testDBURL == "" {
+		b.Skip("TEST_DATABASE_URL not set, skipping benchmark")
+	}
+
 	app := &App{
 		DbRawWriteChan: make(chan *ParsedLog, 100),
 		MetricChan:     make(chan *ParsedLog, 100),
@@ -619,11 +658,15 @@ func BenchmarkWriteSnapshotToDb(b *testing.B) {
 		MetricsMu: sync.RWMutex{},
 	}
 
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("postgres", testDBURL)
 	if err != nil {
 		b.Fatalf("Failed to open test database: %v", err)
 	}
 	defer db.Close()
+
+	// Clean up any existing test tables
+	_, _ = db.Exec("DROP TABLE IF EXISTS raw_logs")
+	_, _ = db.Exec("DROP TABLE IF EXISTS metric_snapshots")
 
 	err = app.initTables(db)
 	if err != nil {

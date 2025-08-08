@@ -2,7 +2,7 @@
 FROM golang:1.24.4-alpine AS builder
 
 # Build
-RUN apk add --no-cache --update gcc musl-dev sqlite-dev
+RUN apk add --no-cache --update gcc musl-dev
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
@@ -34,7 +34,7 @@ RUN mkdir -p /etc/supervisor/conf.d && \
     echo 'command=/usr/local/bin/parseflow' >> /etc/supervisor/conf.d/supervisord.conf && \
     echo 'autostart=true' >> /etc/supervisor/conf.d/supervisord.conf && \
     echo 'autorestart=true' >> /etc/supervisor/conf.d/supervisord.conf && \
-    echo 'environment=PORT=8080,DATABASE_PATH=/app/data/logs.db,RAW_LOG_CHAN_SIZE=2000,PARSED_LOG_CHAN_SIZE=2000,METRIC_CHAN_SIZE=200,BATCH_SIZE=200,FLUSH_INTERVAL=3s,SNAPSHOT_INTERVAL=30s,METRICS_API_KEY=%(ENV_METRICS_API_KEY)s' >> /etc/supervisor/conf.d/supervisord.conf && \
+    echo 'environment=PORT="8080",DATABASE_URL="%(ENV_DATABASE_URL)s",RAW_LOG_CHAN_SIZE="2000",PARSED_LOG_CHAN_SIZE="2000",METRIC_CHAN_SIZE="200",BATCH_SIZE="200",FLUSH_INTERVAL="3s",SNAPSHOT_INTERVAL="30s",METRICS_API_KEY="%(ENV_METRICS_API_KEY)s"' >> /etc/supervisor/conf.d/supervisord.conf && \
     echo '' >> /etc/supervisor/conf.d/supervisord.conf && \
     echo '[program:nginx]' >> /etc/supervisor/conf.d/supervisord.conf && \
     echo 'command=nginx -g "daemon off;"' >> /etc/supervisor/conf.d/supervisord.conf && \

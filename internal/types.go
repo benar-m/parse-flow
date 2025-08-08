@@ -8,17 +8,18 @@ import (
 )
 
 type App struct {
-	Dc             *DedupeCache
-	RawLogChan     chan []byte
-	ParsedLogChan  chan *ParsedLog
-	GeoDb          *ip2.DB
-	Metric         *Metric
-	MetricsMu      sync.RWMutex // protect Metric field
-	DbWriteChan    chan *Metric
-	DbRawWriteChan chan *ParsedLog
-	MetricChan     chan *ParsedLog
-	RateLimiter    *RateLimiterMap
-	Config         *Config
+	Dc                *DedupeCache
+	RawLogChan        chan []byte
+	ParsedLogChan     chan *ParsedLog
+	GeoDb             *ip2.DB
+	Metric            *Metric
+	MetricsMu         sync.RWMutex // protect Metric field
+	DbWriteChan       chan *Metric
+	DbRawWriteChan    chan *ParsedLog
+	MetricChan        chan *ParsedLog
+	RateLimiter       *RateLimiterMap
+	Config            *Config
+	PercentileTracker *PercentileTracker
 }
 type DedupeCache struct {
 	mu       sync.Mutex
@@ -26,6 +27,13 @@ type DedupeCache struct {
 	Lookup   map[string]struct{}
 	Size     int
 	WritePos int //cuurent write position
+}
+
+type PercentileTracker struct {
+	ResponseTimes []time.Duration
+	RequestCount  int
+	LastCalcTime  time.Time
+	Mutex         sync.RWMutex
 }
 
 type ParsedLog struct {

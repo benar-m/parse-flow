@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"parseflow/internal"
+	"time"
 
 	ip2 "github.com/ip2location/ip2location-go"
 )
@@ -34,11 +35,16 @@ func main() {
 		DbWriteChan:    dbWriteChan,
 		MetricChan:     metricChan,
 		Config:         config,
+		PercentileTracker: &internal.PercentileTracker{
+			ResponseTimes: make([]time.Duration, 0, 300), // Pre-allocate for 300 requests
+			LastCalcTime:  time.Now(),
+		},
 	}
 	app.RateLimiter = internal.NewRateLimiterMap(100, 10)
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /logdrains", app.LogReceiver)
 	mux.HandleFunc("GET /metrics", app.MetricsHandler)
+	mux.HandleFunc("GET /historical", app.HistoricalHandler)
 
 	go app.ParserWorker()
 	go app.FanOut()

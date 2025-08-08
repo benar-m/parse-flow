@@ -509,7 +509,6 @@ func TestConcurrentDatabaseWrites(t *testing.T) {
 }
 
 func BenchmarkWriteLogToDb(b *testing.B) {
-	// Use TEST_DATABASE_URL for benchmarks
 	testDBURL := os.Getenv("TEST_DATABASE_URL")
 	if testDBURL == "" {
 		b.Skip("TEST_DATABASE_URL not set, skipping benchmark")
@@ -532,7 +531,7 @@ func BenchmarkWriteLogToDb(b *testing.B) {
 	}
 	defer db.Close()
 
-	// Clean up any existing test tables
+	// clean up any existing test tables
 	_, _ = db.Exec("DROP TABLE IF EXISTS raw_logs")
 	_, _ = db.Exec("DROP TABLE IF EXISTS metric_snapshots")
 
@@ -570,7 +569,6 @@ func BenchmarkWriteLogToDb(b *testing.B) {
 }
 
 func BenchmarkWriteBatchToDb(b *testing.B) {
-	// Use TEST_DATABASE_URL for benchmarks
 	testDBURL := os.Getenv("TEST_DATABASE_URL")
 	if testDBURL == "" {
 		b.Skip("TEST_DATABASE_URL not set, skipping benchmark")
@@ -641,7 +639,6 @@ func BenchmarkWriteBatchToDb(b *testing.B) {
 }
 
 func BenchmarkWriteSnapshotToDb(b *testing.B) {
-	// Use TEST_DATABASE_URL for benchmarks
 	testDBURL := os.Getenv("TEST_DATABASE_URL")
 	if testDBURL == "" {
 		b.Skip("TEST_DATABASE_URL not set, skipping benchmark")
